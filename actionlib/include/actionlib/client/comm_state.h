@@ -50,10 +50,15 @@ public:
   //! \brief Defines the various states the Communication State Machine can be in
   enum StateEnum
   {
+    // 等待server响应Goal请求
     WAITING_FOR_GOAL_ACK    = 0,
+    // pending状态 
     PENDING                 = 1,
+    // 活跃状态
     ACTIVE                  = 2,
+    // 等待server响应结果状态
     WAITING_FOR_RESULT      = 3,
+    // 等待server响应取消状态
     WAITING_FOR_CANCEL_ACK  = 4,
     RECALLING               = 5,
     PREEMPTING              = 6,
@@ -112,6 +117,7 @@ public:
   StateEnum state_;
 
 private:
+  // 屏蔽无参构造函数
   CommState();
 };
 
