@@ -60,8 +60,11 @@ public:
     WAITING_FOR_RESULT      = 3,
     // 等待server响应取消状态
     WAITING_FOR_CANCEL_ACK  = 4,
+    // goal处于recalling状态
     RECALLING               = 5,
+    // 处于抢占状态
     PREEMPTING              = 6,
+    // 处于完成状态
     DONE                    = 7
   };
 
